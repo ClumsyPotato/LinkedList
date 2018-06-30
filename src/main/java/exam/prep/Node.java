@@ -7,6 +7,7 @@ public class Node {
 
     Node(int newData){
         this.data = newData;
+        next = null;
     }
 
 }
