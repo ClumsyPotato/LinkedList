@@ -60,16 +60,16 @@ public class NodeProcessor {
          //  temp = p;
             p = p.next;
         }
-        if(p == head){
+        if(p == head){    //  Node vor dem anfang hinzufügen
             newNode.next = head;
             head = newNode;
             return head;
         }
-        if(p.next == null){
+        if(p.next == null){ // node am ende hinzufügen
             p.next = newNode;
             return head;
         }
-        temp = p.next.next;
+        temp = p.next.next;         // node in der mitte hinzufügen
         p.next = newNode;
         newNode.next = temp;
         return head;
