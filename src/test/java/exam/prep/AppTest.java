@@ -99,13 +99,13 @@ public class AppTest
 //        head = processor.addNotAtPosition(head,thirdNode,2);
   //      assertTrue(head.next.next.data == thirdNode.data)
 
-        head = processor.addNotAtPosition(head,forthNode,1);
+        head = processor.addNotAtPosition(head,forthNode,2);
 
         System.out.println(head.data);
         System.out.println(head.next.data);
         System.out.println(head.next.next.data);
         System.out.println(head.next.next.next.data);
-       // assertTrue(head.next.next.next.data == forthNode.data);
+        assertTrue(head.next.data == forthNode.data);
 
 
     }

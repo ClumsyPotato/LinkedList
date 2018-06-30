@@ -50,14 +50,15 @@ public class NodeProcessor {
         return head; // nur wenn man es als methode implementiert
     }
 
-    // fügt  neuen node rechts neben den node an stelle n hinzu
+    // fügt  neuen node links neben den node an stelle n hinzu
     // wobei n=0 genau am anfang bedeutet
     public Node addNotAtPosition(Node head, Node newNode, int n){
         Node p = head;
         Node temp = null;
-
-        for(int i = 0;p != null && i < n; i++){
+        Node prev = null;
+        for(int i = 1;p != null && i < n; i++){
          //  temp = p;
+            prev = p;
             p = p.next;
         }
         if(p == head){    //  Node vor dem anfang hinzufügen
@@ -69,9 +70,9 @@ public class NodeProcessor {
             p.next = newNode;
             return head;
         }
-        temp = p.next.next;         // node in der mitte hinzufügen
-        p.next = newNode;
-        newNode.next = temp;
+                 // node in der mitte hinzufügen
+        newNode.next = p;
+        prev.next = newNode;
         return head;
     }
 
