@@ -97,7 +97,6 @@ public class AppTest
         head = processor.addNodeAtBegining(head,thirdNode);
 
 //        head = processor.addNotAtPosition(head,thirdNode,2);
-  //      assertTrue(head.next.next.data == thirdNode.data);
 
         head = processor.addNotAtPosition(head,forthNode,1);
 
